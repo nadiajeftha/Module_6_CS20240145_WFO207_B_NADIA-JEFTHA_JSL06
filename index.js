@@ -1,4 +1,3 @@
-// Sample menu data (Consider fetching this data from a server in a real-world scenario)
 const menu = {
     Starters: ["Garlic Bread", "Bruschetta"],
     MainCourses: ["Margherita Pizza", "Spaghetti Carbonara"],
@@ -17,8 +16,21 @@ const prices ={
 let order = []
 let totalPrice = 0
 
-// Function to display menu items by category
 function displayMenuItems(menu) {
+    const menuContainer = document.getElementById('menu')
+
+    Object.keys(menu).forEach(category => {
+        const categoryElement = document.createElement('h3')
+        categoryElement.textContent = category
+
+        const itemsList = document.createElement('ul')
+        menu[category].forEach(item => {
+            const itemElement = document.createElement('li')
+            itemElement.textContent = item
+            itemElement.addEventListener('click' , () => addToOrder(item))
+            itemsList.appendChild(itemElement)
+        })
+    })
     // Get the menu container element from the HTML
    
     // Loop through each category and its items in the menu object
