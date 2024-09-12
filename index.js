@@ -5,10 +5,22 @@ const menu = {
     Desserts: ["Tiramisu", "Cheesecake"]
 };
 
+const prices ={
+    "Garlic Bread" : 5.00,
+    "Bruschetta" : 6.00,
+    "Margherita Pizza" : 12.00,
+    "Spaghetti Carbonara" : 14.00,
+    "Tiramisu" : 7.00,
+    "Cheesecake" : 6.50,
+}
+
+let order = []
+let totalPrice = 0
+
 // Function to display menu items by category
 function displayMenuItems(menu) {
     // Get the menu container element from the HTML
-
+   
     // Loop through each category and its items in the menu object
 
         // Create an element to represent the category
