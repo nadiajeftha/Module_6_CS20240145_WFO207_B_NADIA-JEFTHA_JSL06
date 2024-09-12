@@ -30,7 +30,13 @@ function displayMenuItems(menu) {
             itemElement.addEventListener('click' , () => addToOrder(item))
             itemsList.appendChild(itemElement)
         })
+        menuContainer.append(categoryElement, itemsList)
     })
+}
+function addToOrder(item) {
+    order.push(item)
+    totalPrice += prices[item]
+}
     // Get the menu container element from the HTML
    
     // Loop through each category and its items in the menu object
