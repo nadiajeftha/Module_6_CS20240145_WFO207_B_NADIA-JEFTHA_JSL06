@@ -38,7 +38,7 @@ function addToOrder(item) {
     totalPrice += prices[item]
 
     const orderItemsList = document.getElementById('order-items')
-    orderItemsList.innerHTML = order.map(item => <`<li>${item} - R${prices[item].toFixed(2)}</li>`).join('')
+    orderItemsList.innerHTML = order.map(item => `<li>${item} - R${prices[item].toFixed(2)}</li>`).join('')
 
     document.getElementById('order-total').textContent = totalPrice.toFixed(2)
 }
