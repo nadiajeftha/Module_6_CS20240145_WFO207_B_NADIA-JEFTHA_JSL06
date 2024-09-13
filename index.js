@@ -42,12 +42,4 @@ function addToOrder(item) {
 
     document.getElementById('order-total').textContent = totalPrice.toFixed(2)
 }
-    
-
-// Function to initialize the menu system
-function displayMenuItems(menu) {
-    // Call the function to display menu items
-}
-
-// Start the menu system by calling the init function
-displayMenuItems(menu);
+displayMenuItems(menu)
