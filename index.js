@@ -36,6 +36,9 @@ function displayMenuItems(menu) {
 function addToOrder(item) {
     order.push(item)
     totalPrice += prices[item]
+
+    const orderItemsList = document.getElementById('order-items')
+    orderItemsList.innerHTML = order.map(item => <`<li>${item} - R${prices[item].toFixed(2)}</li>`).join('')
 }
     // Get the menu container element from the HTML
    
